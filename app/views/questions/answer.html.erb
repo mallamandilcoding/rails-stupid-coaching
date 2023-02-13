@@ -1,0 +1,9 @@
+<% if @message != '' %>
+  <div class="result">
+    <p><span  class="main-ask"> Question :: </span><%= params[:question] %></p>
+  <p > <span class="main-ask"> ANSWER => </span><%= @message %></p>
+  </div>
+<% else %>
+  <span class="error-msg"> There was no input. Redo it.</span>
+<% end %>
+<%= link_to "Ask a new question" , ask_path %>
